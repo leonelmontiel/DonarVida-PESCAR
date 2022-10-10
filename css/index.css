@@ -1,0 +1,13 @@
+:root {
+    --btn-neon: #77aeff;
+}
+
+.btn-neon {
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.btn-neon:hover {
+    background-color: var(--btn-neon);
+    box-shadow: 0 0 10px  var(--btn-neon), 0 0 40px var(--btn-neon), 0 0 80px  var(--btn-neon);
+}
