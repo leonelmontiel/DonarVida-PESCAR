@@ -1,0 +1,11 @@
+.Carrusel{
+    max-width: 800px;
+    margin: 0 auto;
+    display:flex;
+}
+#Imagen {
+    width: 100%;
+    height: 400px;
+    background-size:cover ;
+    transition: 0.5s;
+}
