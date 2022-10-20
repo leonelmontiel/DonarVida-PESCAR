@@ -6,9 +6,9 @@ window.onload = function () {
     ];
     
     let posicionActual = 0;
-    let $botonRetroceder = document.querySelector ('#Retroceder');
-    let $botonAvanzar = document.querySelector ('#Avanzar');
-    let $Imagen = document.querySelector('#Imagen');
+    let $botonRetroceder = document.querySelector ('#retroceder');
+    let $botonAvanzar = document.querySelector ('#avanzar');
+    let $Imagen = document.querySelector('#imagen');
 
     function pasarFoto () {
         if (posicionActual >= IMAGENES.length - 1){

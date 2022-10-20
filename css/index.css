@@ -11,3 +11,8 @@
     background-color: var(--btn-neon);
     box-shadow: 0 0 10px  var(--btn-neon), 0 0 40px var(--btn-neon), 0 0 80px  var(--btn-neon);
 }
+
+.navbar {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    position: fixed;
+}

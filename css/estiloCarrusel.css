@@ -1,0 +1,14 @@
+.carrusel{
+    margin: 0 auto;
+    display: flex;
+}
+#imagen {
+    height: 75vh;
+    background-size:cover ;
+    transition: 0.5s;
+}
+
+.botonCarrusel {
+    width: 5%;
+    border: none;
+}
