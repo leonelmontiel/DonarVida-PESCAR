@@ -14,10 +14,7 @@
 
 <body>
 
-  
-
   <header>
-
     <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
       <div class="container-fluid gap-3">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
@@ -47,13 +44,42 @@
 
   <main>
 
-    <div class="carrusel w-100">
-      <button class="botonCarrusel bg-primary" id="retroceder"><i class="fa-solid fa-angles-left text-white"></i></button>
+    <div class="carrusel w-100 d-flex align-items-center position-relative shadow">
+      <button class="botonCarrusel h-100 position-absolute top-50 translate-middle" id="retroceder">
+        <i class="fa-solid fa-angles-left text-white fs-3"></i></button>
       <div id="imagen" class="w-100"></div>
-      <button class="botonCarrusel bg-primary" id="avanzar"><i class="fa-solid fa-angles-right text-white"></i></button>
+      <button class="botonCarrusel h-100 position-absolute top-50 translate-middle" id="avanzar">
+        <i class="fa-solid fa-angles-right text-white fs-3"></i></button>
     </div>
+    
+  </br>
 
-    <section class=""></section>
+    <section class="container text-center bg-white rounded">
+      <h2 class="p-3 text-primary">Nosotros</h2>
+
+      <div class="row d-flex justify-content-between" id="nosotros">
+        <div class="col-12 col-lg-3">
+          <img class="img-fluid" src="./img/gaby.png" alt="">
+          <h5>Gabriel Velasco</h5>
+        </div>
+        <div class="col-12 col-lg-3">
+          <img class="img-fluid" src="./img/leo.png" alt="">
+          <h5>Leonel Montiel</h5>
+        </div>
+        <div class="col-12 col-lg-3">
+          <img class="img-fluid" src="./img/mati.png" alt="">
+          <h5>Matías Juarez</h5>
+        </div>
+        <div class="col-12 col-lg-3">
+          <img class="img-fluid" src="./img/lucas.png" alt="">
+          <h5>Lucas Paz</h5>
+        </div>        
+      </div>
+
+      <p class="lh-lg fw-semibold fs-4 p-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic nam debitis dolor recusandae harum temporibus
+        distinctio iusto sint et! Quos, modi facere cupiditate natus exercitationem necessitatibus quibusdam odio
+        deleniti dolor.</p>
+    </section>
 
   </main>
 
@@ -65,5 +91,6 @@
 <script src="Carrusel.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/c926e0f0fa.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/c926e0f0fa.js" crossorigin="anonymous"></script>
+
 </html>

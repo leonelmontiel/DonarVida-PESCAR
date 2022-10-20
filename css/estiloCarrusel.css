@@ -4,11 +4,26 @@
 }
 #imagen {
     height: 75vh;
-    background-size:cover ;
+    background-size:cover;
     transition: 0.5s;
 }
 
 .botonCarrusel {
-    width: 5%;
     border: none;
+    z-index: 10;
+    background: none;
 }
+
+#avanzar {
+    left: 98%;
+}
+
+#retroceder {
+    left: 2%;
+}
+
+@media (max-width: 600px) {
+    #imagen {
+        height: 100vh;
+    }
+  }
