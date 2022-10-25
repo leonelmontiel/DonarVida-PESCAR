@@ -16,3 +16,22 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     position: fixed;
 }
+
+.fa-github, .fa-linkedin {
+    font-size: 3em;
+}
+
+.perfil-img {
+    border-radius: 50%;
+    border: 5px solid #0d6efd;
+}
+
+@media (max-width: 600px) {
+    .fa-github, .fa-linkedin {
+        font-size: 5em;
+    }
+
+    #nosotros {
+        gap: 3em;
+    }
+  }
