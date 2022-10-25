@@ -16,3 +16,15 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     position: fixed;
 }
+.seccionPreguntasParrafo{
+    text-align: center;   
+}
+.seccionPreguntasTitulo{
+    text-align: center;
+}
+#QueOfrecemos, #PorElegirnos{
+    color: blue;
+}
+#ComoServicios{
+    color: red;
+}
