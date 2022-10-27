@@ -2,6 +2,10 @@
     --btn-neon: #77aeff;
 }
 
+body {
+    background-color: whitesmoke !important;
+}
+
 .btn-neon {
     overflow: hidden;
     transition: 0.2s;
@@ -26,12 +30,37 @@
     border: 5px solid #0d6efd;
 }
 
+.perfil-card div{
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+.perfil-front {
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.perfil-back {
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.perfil-card:hover .perfil-front {
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.perfil-card:hover .perfil-back {
+    transform: perspective(500px) rotateY(360deg);
+}
+
+.perfil-card {
+    height: 350px !important;
+}
+
+#nosotros {
+    background-color: white;
+}
+
 @media (max-width: 600px) {
     .fa-github, .fa-linkedin {
         font-size: 5em;
-    }
-
-    #nosotros {
-        gap: 3em;
     }
   }
