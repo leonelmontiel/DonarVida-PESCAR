@@ -1,8 +1,8 @@
 window.onload = function () {
     const IMAGENES = [
-        '../static/img/imagen1.jpg',
-        '../static/img/imagen4.jpg',
-        '../static/img/imagen5.jpg',
+        '../img/imagen1.jpg',
+        '../img/imagen4.jpg',
+        '../img/imagen5.jpg',
     ];
     
     let posicionActual = 0;

@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/css/estiloCarrusel.css">
-  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/estiloCarrusel.css" th:href="@{/css/estiloCarrusel.css}">
+  <link rel="stylesheet" type="text/css" href="../static/css/index.css" th:href="@{/css/index.css}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <title>Donar Vida | Inicio</title>
@@ -15,162 +15,24 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
-      <div class="container-fluid gap-3">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-          aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="logo d-flex align-items-center text-white">
-          <img src="../static/img/blood.svg" width="50px" alt="">
-          <h3>Donar <span>VIDA</span></h3>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item btn-neon"><a class="nav-link text-white" href="#">Inicio</a></li>
-            <li class="nav-item btn-neon"><a class="nav-link text-white" href="#">Donaciones</a></li>
-            <li class="nav-item btn-neon"><a class="nav-link text-white" href="#">Solicitantes</a></li>
-            <li class="nav-item btn-neon"><a class="nav-link text-white" href="#nosotros">Nosotros</a></li>
-            <li class="nav-item btn-neon"><a class="nav-link text-white" href="#">Contacto</a></li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
+    <div th:include="nav.html" th:remove="tag"></div>
   </header>
 
   <main>
 
-    <div class="carrusel w-100 d-flex align-items-center position-relative shadow">
-      <button class="botonCarrusel h-100 position-absolute top-50 translate-middle" id="retroceder">
-        <i class="fa-solid fa-angles-left text-white fs-3"></i></button>
-      <div id="imagen" class="w-100">
-        <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-          <h1 class="text-white fw-light">Donar <span class="text-danger">Vida</span></h1>
-          <h4 class="text-white fst-italic">Te facilitamos la búsqueda</h4>
-        </div>
-      </div>
-      <button class="botonCarrusel h-100 position-absolute top-50 translate-middle" id="avanzar">
-        <i class="fa-solid fa-angles-right text-white fs-3"></i></button>
-    </div>
+    <div th:include="carrusel.html" th:remove="tag"></div>
 
     </br>
 
-    <section class="container shadow text-center rounded" id="nosotros">
-      <h2 class="p-3 text-primary">Nosotros</h2>
-
-      <div class="row d-flex justify-content-between" id="nosotros">
-        <div
-          class="col-12 col-lg-3 d-flex flex-column justify-content-between align-items-center perfil-card position-relative">
-
-          <div
-            class="perfil-front position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column">
-            <img class="img-fluid perfil-img h-50" src="../static/img/gabi.jpg" alt="">
-            <h5 class="h-25 d-flex align-items-center">Gabriel Velasco</h5>
-            <p class="h-25">Desarrollador Web Full Stack - HTML | CSS | JS | Bootstrap</p>
-          </div>
-          <div
-            class="perfil-back position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column">
-            <div>
-              <a href="https://github.com/Gabrielvelasco31" target="_blank"><i class="fa-brands fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/gabriel-ale-velasco/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="col-12 col-lg-3 d-flex flex-column justify-content-between align-items-center  perfil-card position-relative">
-
-          <div
-            class="perfil-front position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column">
-            <img class="img-fluid perfil-img h-50" src="../static/img/leonel.JPG" alt="">
-            <h5 class="h-25 d-flex align-items-center">Leonel Montiel</h5>
-            <p class="h-25">Desarrollador Web FullStack - HTML | CSS | JS | Bootstrap | SASS | Java | Spring | MySQL</p>
-          </div>
-          <div
-            class="perfil-back position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column">
-            <div>
-              <a href="https://github.com/leonelmontiel" target="_blank"><i class="fa-brands fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/leonel-montiel/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-        <div
-          class="col-12 col-lg-3 d-flex flex-column justify-content-between align-items-center  perfil-card position-relative">
-
-          <div
-            class="perfil-front position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column">
-            <img class="img-fluid perfil-img h-50" src="../static/img/mati.jpg" alt="">
-            <h5 class="h-25 d-flex align-items-center">Matías Juarez</h5>
-            <p class="h-25">Desarrollador Web Full Stack - HTML | CSS | JS | Bootstrap | Node.js | React | MySQL</p>
-          </div>
-          <div
-            class="perfil-back position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column">
-            <div>
-              <a href="https://github.com/JrzMatias" target="_blank"><i class="fa-brands fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/juarezmatias/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-        <div
-          class="col-12 col-lg-3 d-flex flex-column justify-content-between align-items-center  perfil-card position-relative">
-
-          <div
-            class="perfil-front position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column">
-            <img class="img-fluid perfil-img h-50" src="../static/img/lucas.jpg" alt="">
-            <h5 class="h-25 d-flex align-items-center">Lucas Paz</h5>
-            <p class="h-25">Estudiante de desarrollo web full stack</p>
-          </div>
-          <div
-            class="perfil-back position-absolute w-100 h-100 d-flex justify-content-center align-items-center flex-column">
-            <div>
-              <a href="https://github.com/lucaspaz0108" target="_blank"><i class="fa-brands fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/lucas-paz-/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <p class="lh-lg fs-5 p-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic nam debitis
-        dolor recusandae harum temporibus
-        distinctio iusto sint et! Quos, modi facere cupiditate natus exercitationem necessitatibus quibusdam odio
-        deleniti dolor.</p>
-    </section>
+    <div th:include="nosotros.html" th:remove="tag"></div>
 
   </main>
 
   <footer>
-    <nav class="navbar navbar-dark bg-primary">
-      <div class="container-fluid gap-3 d-flex flex-column">
-        <div class="logo d-flex align-items-center text-white">
-          <img src="../static/img/blood.svg" width="50px" alt="">
-          <h3>Donar <span>VIDA</span></h3>
-        </div>
-        <div>
-          <ul class="navbar-nav gap-3 d-flex flex-row">
-            <li><a class="nav-link text-white" href="#">Inicio</a></li>
-            <li><a class="nav-link text-white" href="#">Donaciones</a></li>
-            <li><a class="nav-link text-white" href="#">Solicitantes</a></li>
-            <li><a class="nav-link text-white" href="#nosotros">Nosotros</a></li>
-            <li><a class="nav-link text-white" href="#">Contacto</a></li>
-            <li><a class="nav-link text-white" href="https://github.com/leonelmontiel/DonarVida-PESCAR">GitHub</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div th:include="footer.html" th:remove="tag"></div>
   </footer>
 
 </body>
-<script src="../static/Carrusel.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/c926e0f0fa.js" crossorigin="anonymous"></script>
