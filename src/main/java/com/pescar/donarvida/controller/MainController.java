@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class SolicitudesController {
+public class MainController {
 
     @GetMapping("/")
 	public String getSolicitudes(Model model) {

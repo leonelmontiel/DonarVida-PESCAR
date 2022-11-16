@@ -1,8 +1,8 @@
 window.onload = function () {
     const IMAGENES = [
-        '../img/imagen1.jpg',
-        '../img/imagen4.jpg',
-        '../img/imagen5.jpg',
+        '../img/portada1.png',
+        '../img/portada2.png',
+        '../img/portada3.png',
     ];
     
     let posicionActual = 0;
@@ -30,6 +30,8 @@ window.onload = function () {
     function renderizarImagen () {
         $Imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
     }
+
+    setInterval(pasarFoto, "5000");
     
     $botonAvanzar.addEventListener('click', pasarFoto);
     $botonRetroceder.addEventListener('click', retrocederFoto)
