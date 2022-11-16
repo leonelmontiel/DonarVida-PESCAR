@@ -29,8 +29,9 @@ window.onload = function () {
     }
     function renderizarImagen () {
         $Imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
-        setTimeout(pasarFoto, "5000");
     }
+
+    setInterval(pasarFoto, "5000");
     
     $botonAvanzar.addEventListener('click', pasarFoto);
     $botonRetroceder.addEventListener('click', retrocederFoto)
