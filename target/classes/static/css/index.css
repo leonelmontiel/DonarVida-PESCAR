@@ -4,4 +4,9 @@
 
 body {
     background-color: whitesmoke !important;
+    min-height: 100vh;
+}
+
+main {
+    margin-top: 65px;
 }
