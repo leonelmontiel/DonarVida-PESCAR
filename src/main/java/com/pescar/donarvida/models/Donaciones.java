@@ -9,11 +9,11 @@ import javax.persistence.*;
 public class Donaciones implements Serializable {
 
     @Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_donaciones")
     private Long id;
-    
-	@Column(name = "nombre")
+
+    @Column(name = "nombre")
     private String nombre;
 
     @Column(name = "apellido")
@@ -31,9 +31,14 @@ public class Donaciones implements Serializable {
     @Column(name = "tipo_sangre")
     private String tipoSangre;
 
-    public Donaciones() {}
+    @Column(name = "sexo")
+    private String sexo;
 
-    public Donaciones (Long id, String nombre, String apellido, Integer edad, String localidad, String celular, String tipoSangre) {
+    public Donaciones() {
+    }
+
+    public Donaciones(Long id, String nombre, String apellido, Integer edad, String localidad, String celular,
+            String tipoSangre, String sexo) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -41,15 +46,18 @@ public class Donaciones implements Serializable {
         this.localidad = localidad;
         this.celular = celular;
         this.tipoSangre = tipoSangre;
+        this.sexo = sexo;
     }
-    
-    public Donaciones (String nombre, String apellido, Integer edad, String localidad, String celular, String tipoSangre) {
+
+    public Donaciones(String nombre, String apellido, Integer edad, String localidad, String celular, String tipoSangre,
+            String sexo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.localidad = localidad;
         this.celular = celular;
         this.tipoSangre = tipoSangre;
+        this.sexo = sexo;
     }
 
     public Long getId() {
@@ -80,6 +88,10 @@ public class Donaciones implements Serializable {
         return tipoSangre;
     }
 
+    public String getSexo() {
+        return sexo;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -108,6 +120,10 @@ public class Donaciones implements Serializable {
         this.tipoSangre = tipoSangre;
     }
 
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -119,6 +135,7 @@ public class Donaciones implements Serializable {
         result = prime * result + ((localidad == null) ? 0 : localidad.hashCode());
         result = prime * result + ((celular == null) ? 0 : celular.hashCode());
         result = prime * result + ((tipoSangre == null) ? 0 : tipoSangre.hashCode());
+        result = prime * result + ((sexo == null) ? 0 : sexo.hashCode());
         return result;
     }
 
@@ -166,13 +183,18 @@ public class Donaciones implements Serializable {
                 return false;
         } else if (!tipoSangre.equals(other.tipoSangre))
             return false;
+        if (sexo == null) {
+            if (other.sexo != null)
+                return false;
+        } else if (!sexo.equals(other.sexo))
+            return false;
         return true;
     }
 
     @Override
     public String toString() {
         return "Donaciones [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad
-                + ", localidad=" + localidad + ", celular=" + celular + ", tipoSangre=" + tipoSangre + "]";
+                + ", localidad=" + localidad + ", celular=" + celular + ", tipoSangre=" + tipoSangre + ", sexo=" + sexo + "]";
     }
 
 }

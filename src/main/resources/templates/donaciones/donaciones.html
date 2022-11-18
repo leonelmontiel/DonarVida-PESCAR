@@ -19,17 +19,31 @@
     </header>
   
     <main>
+
+      <section class="m-3 d-flex justify-content-center">
+
+        <article th:if="${donaciones.isEmpty()}">
+          <div id="no-donacion" class="d-flex justify-content-center align-items-center"><h2>No existe ninguna solicitud de donación</h2></div>
+        </article>
+        <article class="d-flex gap-3" th:unless="${donaciones.isEmpty()}">
+
+          <div th:each="donacion : ${donaciones}" class="card text-center" style="width: 18rem;">
+            <div class="card-body">
+              <h3 class="card-title" th:text="${donacion.getTipoSangre()}"></h3>
+              <h6 class="card-subtitle mb-2 text-muted" th:text="|${donacion.getSexo()} de ${donacion.getEdad()} años|"></h6>
+              <h5 class="card-text" th:text="|${donacion.getNombre()} ${donacion.getApellido()}|"></h5>
+              <p class="card-text" th:text="|${donacion.getLocalidad()}|"></p>
+              <p class="card-text" th:text="|${donacion.getCelular()}|"></p>
+              <button type="button" class="btn btn-primary">Solicitar</button>
+            </div>
+          </div>
+
+        </article>
+      
+      </section>
   
       
-      <section th:if="${donaciones.isEmpty()}">
-        <div id="no-donacion" class="d-flex justify-content-center align-items-center"><h2>No existe ninguna solicitud de donación</h2></div>
-      </section>
-      <section th:unless="${donaciones.isEmpty()}">
-        <div th:each="donacion : ${donaciones}">
-          <h2>Donante</h2>
-          <div th:text="${donacion.getNombre()}">Mostrar nombre</div>
-        </div>
-      </section>
+      
       
     </main>
   
