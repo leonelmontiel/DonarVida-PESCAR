@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <section class="container-sm shadow p-3 mb-5 bg-body rounded fs-4">
+        <h3>Publicar Donación</h3>
+
+        <form class="p-3" th:action="@{../../donaciones/guardar}" method="POST"
+            modelAttribute="donacion" >
+            <div class="form-row d-flex gap-3">
+                <input type="hidden" class="form-control" name="id" path="id" required />
+                <div class="w-100 mb-3">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Anthony" name="nombre"
+                        path="nombre" />
+                    <form:errors path="nombre" />
+                </div>
+                <div class="w-100 mb-3">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" placeholder="Kiedis" name="apellido"
+                        path="apellido" />
+                    <form:errors path="apellido" />
+                </div>
+                <div class="w-100 mb-3">
+                    <label for="edad">Edad</label>
+                    <input type="number" class="form-control" placeholder="26 años" name="edad" path="edad" />
+                    <form:errors path="edad" />
+                </div>      
+            </div>          
+            <div class="form-row d-flex gap-3">
+                <div class="w-100 mb-3">
+                    <label for="localidad">Localidad</label>
+                    <input type="text" class="form-control" placeholder="Los Angeles" name="localidad"
+                        path="localidad" />
+                    <form:errors path="localidad" />
+                </div>                
+                <div class="w-100 mb-3">
+                    <label for="celular">Celular</label>
+                    <input type="text" class="form-control" placeholder="1194857483" name="celular"
+                        path="celular" />
+                    <form:errors path="celular" />
+                    <span class="form-text text-danger"
+                        th:if="${excepcion != null && excepcion.getMessage().equals('Celular duplicado')}"
+                        th:text="${excepcion.getMessage()}"></span>
+                </div>
+                <div class="w-100 mb-3">
+                    <label for="tipoSangre">Tipo de sangre</label>
+                    <select class="form-select" aria-label="Default select example" name="tipoSangre"
+                        path="tipoSangre.id_sangre">
+                        <option selected value="1">A +</option>
+                        <option value="2">A -</option>
+                        <option value="3">B +</option>                        
+                        <option value="4">B-</option>
+                        <option value="5">AB +</option>
+                        <option value="6">AB -</option>                        
+                        <option value="7">O+</option>
+                        <option value="8">O -</option>
+                    </select>
+                    <form:errors path="tipoSangre" />
+                </div>					
+            </div>
+
+            <div class="d-flex justify-content-center gap-3 p-3 flex-row modal-footer">
+                <input type="submit" name="guardar" value="Confirmar"
+                    class="p-3 p-sm-1 btn btn-success btn-lg col-12 col-sm-3" />
+                <a th:href="@{/donaciones}" class="text-decoration-none text-white col-12 col-sm-3"><button
+                        type="button" class="w-100 p-3 p-sm-1 btn btn-secondary btn-lg"
+                        th:text="Volver"></button></a>
+            </div>
+        </form>
+
+    </section>
+</body>
+</html>
