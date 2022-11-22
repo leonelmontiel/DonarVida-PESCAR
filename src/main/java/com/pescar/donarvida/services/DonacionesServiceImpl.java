@@ -21,4 +21,34 @@ public class DonacionesServiceImpl implements DonacionesService {
         return (List<Donaciones>) this.donacionesDao.findAll();
     }
 
+    @Override
+    @Transactional(readOnly = true)
+    public boolean existe(Donaciones donacion) {
+        return donacion.getId() != null && donacionesDao.existsById(donacion.getId());
+    }
+
+    @Override
+    @Transactional
+    public void actualizar(Donaciones donacion) {
+        Donaciones donacionbd = this.encontrarDonacion(donacion);
+		donacionbd.setNombre(donacionbd.getNombre());
+		donacionbd.setApellido(donacionbd.getApellido());
+        donacionbd.setEdad(donacionbd.getEdad());
+		donacionbd.setLocalidad(donacionbd.getLocalidad());
+		donacionbd.setCelular(donacionbd.getCelular());
+		donacionbd.setTipoSangre(donacionbd.getTipoSangre());
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Donaciones encontrarDonacion(Donaciones donacion) {
+        return donacionesDao.findById(donacion.getId()).orElse(null);
+    }
+
+    @Override
+    @Transactional
+    public void guardar(Donaciones donacion) {
+        donacionesDao.save(donacion);
+    }
+
 }

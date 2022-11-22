@@ -8,4 +8,12 @@ public interface DonacionesService {
 
     public List<Donaciones> listarDonaciones();
 
+    public boolean existe(Donaciones donacion);
+
+    public void actualizar(Donaciones donacion);
+
+    public void guardar(Donaciones donacion);
+
+    public Donaciones encontrarDonacion(Donaciones donacion);
+
 }
