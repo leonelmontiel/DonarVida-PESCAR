@@ -1,3 +1,4 @@
+/*
 .btn-neon {
     overflow: hidden;
     transition: 0.2s;
@@ -12,3 +13,166 @@
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     z-index: 10;
 }
+*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+/* RESETEO */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* TEMAS WEBSITE */
+
+:root {
+    --bg-color: hsl(var(--hue-1), 100%, 97%);
+    --main-color-1: #D60015;
+    --main-color-2: hsl(var(--hue-2), 100%, 61%);
+    font-family: 'Poppins', sans-serif !important;
+}
+
+body {
+    --bg-color: hsl(var(--hue-1), 100%, 97%);
+    --bg-color-1: hsl(var(--hue-1), 100%, 97%);
+    --bg-color-2: #fff;
+    --bg-color-3: hsl(var(--hue-1), 100%, 98%);
+    --bg-color-transparent: rgba(255, 255, 255, 0.6);
+    --text-color: hsl(var(--hue-1), 17%, 63%);
+}
+
+
+/* ESTILOS GENERALES */
+
+body {
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+    font-family: "Poppins", sans-serif;
+    transition: 0.3s background-color;
+}
+
+::selection {
+    background-color: hsl(var(--hue-1), 100%, 60%, 0.9);
+    color: #fff;
+}
+
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+     z-index: 10;  
+    transition: 0.3s;
+}
+
+header.scrolled {
+    background-color: var(--bg-color-transparent);
+    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.01);
+}
+
+ header.scrolled .logo {
+    height: 80px;
+    line-height: 80px;
+} 
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 75rem;
+    /* padding-bottom: 20rem; */
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+#logo {
+  height: 10rem;
+  width: 10rem;
+}
+
+.links {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.links ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-link {
+    display: inline-block;
+    position: relative;
+    margin: 0 1.3rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: black !important;
+    font-weight: 500;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #D60015;
+    bottom: 0;
+    left: -5px;
+    z-index: -1;
+    opacity: 0.2;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #D60015;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+    opacity: 0.4;
+}
+
+.button_color{
+    background-color: #d60015ae !important;
+    border: none;
+    border-radius: 1rem !important;
+    outline: none !important;
+    border-color:#d60015ae !important ;
+} 
+
+.perfil-img{
+    border-color: #DDC8C4 !important;
+}
+
+#h2_nos{
+    color: black;
+    font-size: 4rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
