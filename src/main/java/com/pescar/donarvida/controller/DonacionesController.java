@@ -31,14 +31,15 @@ public class DonacionesController {
     @PostMapping("donaciones/guardar")
 	public String guardar(@ModelAttribute("donacion") Donaciones donacion, Errors errors, Model model) throws Exception {
 		if (errors.hasErrors()) {
-			return "donaciones/donaciones";
+			return this.getDonaciones(model);
 		}
 		try {
 			this.actualizarOGuardar(donacion);
 		} catch (Exception e) {
 			model.addAttribute("excepcion", e);
-			return "donaciones/donaciones";
+			return this.getDonaciones(model);
 		}
+		
 		return "redirect:/donaciones";
 		
 	}
