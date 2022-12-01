@@ -1,0 +1,20 @@
+.background {
+    background-color: white !important;
+}
+
+
+.button_color{
+    background-color: #d60015ae !important;
+    border: none;
+    border-radius: 1rem !important;
+    outline: none !important;
+    border-color:#d60015ae !important ;
+} 
+
+#h1_c{
+    color: #d60015ae !important;
+}
+
+#p_c{
+    color: #d60015ae !important;
+}

@@ -4,27 +4,110 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="../static/css/footer.css" th:href="@{/css/footer.css}">
+  <link rel="stylesheet" type="text/css" href="../static/css/footer.css" th:href="@{/css/footer.css}"> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-  <div class="footer-basic">
-    <footer>
-        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-        <ul class="list-inline">
-            <li class="list-inline-item"><a href="#">Home</a></li>
-            <li class="list-inline-item"><a href="#">Services</a></li>
-            <li class="list-inline-item"><a href="#">About</a></li>
-            <li class="list-inline-item"><a href="#">Terms</a></li>
-            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-        </ul>
-        <p class="copyright">Company Name © 2018</p>
-    </footer>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <section>
+      <footer class="footer_container">
+        <img id="logo_footer" src="../static/img/LOGO.png" th:src="@{/img/LOGO.png}" alt="">
+        <nav class="footer_container" >
+          <div class="links_footer">
+            <ul class="li_style">
+              <li class="li_style">
+                <a href="/" class="footer_link">Inicio</a>
+              </li>
+              <li class="li_style">
+                <a href="/donaciones" class="footer_link">Donaciones</a>
+              </li>
+              <li class="li_style">
+                <a href="#skills" class="footer_link">Solicitantes</a>
+              </li>
+              <li class="li_style">
+                <a href="#contacto" class="footer_link">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <p id="p_footer">Copyright© Donar Vida 2022</p>
+      </footer>
+    </section>
+  <!-- <footer class="text-center text-white" style="background-color: #f1f1f1;">
+     Grid container 
+    <div class="container pt-4 footer">
+      <header>
+        <nav class="container">
+          <div class="links">
+            <img id="logo" src="../static/img/LOGO.png" th:src="@{/img/LOGO.png}" alt="">
+            <ul>
+              <li>
+                <a href="/" class="nav-link">Inicio</a>
+              </li>
+              <li>
+                <a href="/donaciones" class="nav-link">Donaciones</a>
+              </li>
+              <li>
+                <a href="#skills" class="nav-link">Solicitantes</a>
+              </li>
+              <li>
+                <a href="#contacto" class="nav-link">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      Section: Social media 
+      <section class="mb-4">
+       
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+       
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+       
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+       
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+      </section> -->
+      <!-- Section: Social media -->
+    <!-- </div> -->
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <!-- <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-dark">Donar vida</a>
+    </div> -->
+    <!-- Copyright
+  </footer> -->
 </body>
 </html>
