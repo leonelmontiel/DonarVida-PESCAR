@@ -17,13 +17,17 @@
 }
 
 .footer_container{
+  background-image: url(../img/footer.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   display: flex;
   position: relative;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #fbcdcf !important;
+  /* background-color: #fbcdcf !important; */
 }
 
 .links_footer {

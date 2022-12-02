@@ -1,8 +1,8 @@
 window.onload = function () {
     const IMAGENES = [
-        '../img/HERO4.jpg',
-        '../img/HERO5.jpg',
-        '../img/HERO6.jpg',
+        '../img/carrusel_1.svg',
+        '../img/carrusel_2.svg',
+        '../img/carrusel_3.svg',
     ];
     
     let posicionActual = 0;

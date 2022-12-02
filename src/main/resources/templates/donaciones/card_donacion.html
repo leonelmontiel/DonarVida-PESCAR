@@ -1,14 +1,16 @@
+<link rel="stylesheet" type="text/css" href="../static/css/donaciones.css" th:href="@{/css/donaciones.css}">
 <body>
-    <section class="m-3 donacion">
+ 
+  <section class="m-3 donacion">
 
-        <article th:if="${donaciones.isEmpty()}">
+        <article class="font" th:if="${donaciones.isEmpty()}">
           <div id="no-donacion" class="d-flex justify-content-center align-items-center">
-            <h2>No existe ninguna solicitud de donación</h2>
+            <h2 class="font">No existe ninguna solicitud de donación</h2>
           </div>
         </article>
         <article class="d-flex row gap-3 justify-content-center" th:unless="${donaciones.isEmpty()}">
     
-          <div th:each="donacion : ${donaciones}" class="card text-center col-12 col-lg-4" style="width: 18rem;">
+          <div th:each="donacion : ${donaciones}" class="card text-center col-12 col-lg-4 font" style="width: 18rem;">
             <div class="card-body">
               <h3 class="card-title" th:text="${donacion.getTipoSangre()}"></h3>
               <h6 class="card-subtitle mb-2 text-muted" th:text="|${donacion.getEdad()} años|">
@@ -16,7 +18,7 @@
               <h5 class="card-text" th:text="|${donacion.getNombre()} ${donacion.getApellido()}|"></h5>
               <p class="card-text" th:text="|${donacion.getLocalidad()}|"></p>
               <p class="card-text" th:text="|${donacion.getCelular()}|"></p>
-              <button type="button" class="btn btn-primary">Solicitar</button>
+              <button type="button" class="btn btn-primary button_color">Solicitar</button>
             </div>
           </div>
     
