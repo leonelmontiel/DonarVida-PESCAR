@@ -1,19 +1,4 @@
-/*
-.btn-neon {
-    overflow: hidden;
-    transition: 0.2s;
-}
 
-.btn-neon:hover {
-    background-color: var(--btn-neon);
-    box-shadow: 0 0 10px  var(--btn-neon), 0 0 40px var(--btn-neon), 0 0 80px  var(--btn-neon);
-}
-
-.navbar {
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-}
-*/
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
 
@@ -78,23 +63,16 @@ header {
     /* z-index: 10;   */
     transition: 0.3s;
     background-color: rgba(255, 255, 255, 0.5) !important;
+    z-index: 5;
 }
 
-/* header.scrolled {
-    background-color: var(--bg-color-transparent);
-    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.01);
-} 
-
-  header.scrolled .logo {
-    height: 80px;
-    line-height: 80px;
-}   */
-
+.navbar{
+    background-color: white;
+}
  .container {
     position: relative;
     width: 100%;
     max-width: 75rem;
-    padding-bottom: 20rem; 
 } 
 
 nav .container {
@@ -181,3 +159,6 @@ nav .container {
     font-family: 'Cormorant Garamond', serif;
 }
 
+.icon-menu{
+    color: #d60015ae !important;
+} 

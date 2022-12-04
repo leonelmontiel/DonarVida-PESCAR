@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext");
-html {
+/* html {
   position: relative;
   overflow-x: hidden !important;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -28,25 +28,25 @@ a, a:hover {
 
 .wrapper {
   width: 100%;
-  height: 70vh;
-  /* padding: 50px 20px;
-  padding-top: 100px; */
+  /* height: 70vh; */
   display: flex;
-
   justify-content: center;
+  background-image:url(../img/Fondo_donar_vida.svg);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
  
 }
 @media screen and (max-width: 768px) {
   .wrapper {
-    height: auto;
-    min-height: 100vh;
-    padding-top: 100px;
+    height: auto !important;
+    /* min-height: 100vh; */
+    /* padding-top: 100px; */
   }
 }
 
 .profile-card {
   width: 100%;
-  min-height: 400px;
+  /* min-height: 400px; */
   /* margin: auto;
   margin-left: 10rem;
   margin-right: 15rem; */
@@ -202,8 +202,10 @@ a, a:hover {
   justify-content: center; 
   width: 100%;
   gap: 6rem;
-  background-image:url(../img/Fondo_donar_vida.svg);
-  height: 60vh;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  
+  height: auto; 
   align-items: center;
   align-content: center;
 }
