@@ -59,7 +59,7 @@ header {
     /* top: 0; */
     left: 0;
     width: 100%;
-    height: 10em;
+    height: 5em;
     /* z-index: 10;   */
     transition: 0.3s;
     background-color: rgba(255, 255, 255, 0.5) !important;
@@ -83,8 +83,8 @@ nav .container {
 
 
 #logo {
-  height: 10rem;
-  width: 10rem;
+  height: 5rem;
+  width: 5rem;
 }
 
 .links {

@@ -25,7 +25,8 @@
                                 esta por debajo de lo recomendado que sería un 8 o 10%. Donar sangre salva vidas, te
                                 invitamos a postularte como donante en nuestro sitio web para que las personas que
                                 necesiten tu tipo de sangre puedan encontrarte</p>
-                            <button class="btn btn-primary button_color">Ir a donantes</button>
+                            <a th:href="@{/donantes}"><button class="btn btn-primary button_color">Ir a
+                                    donantes</button></a>
                         </div>
                     </div>
                 </div>
@@ -48,7 +49,7 @@
                                 dificil de conseguir donantes, por esto te dejamos con una sección en nuestra página web
                                 para que puedas subir una solicitud de donación con el objetivo de que donantes lo vean
                                 y te den una mano!</p>
-                            <button class="btn btn-primary button_color">Ir a solicitudes</button>
+                            <a th:href="@{/}"><button class="btn btn-primary button_color">Ir a solicitudes</button></a>
                         </div>
                     </div>
                 </div>
@@ -65,12 +66,11 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h3 class="card-title">Donantes</h3>
-                            <p class="card-text">Seguro te estes preguntando ¿por qué donar? La respuesta es simple, la
-                                persona del otro lado que puede estar en necesidad de donantes puede ser desde un
-                                desconocido/a hasta un pariente o ser querido tuyo, es super fácil donar y estarías
-                                generando un impacto enorme en la vida de otra persona, te dejamos nuestra sección para
-                                que te postules como donante</p>
-                            <button class="btn btn-primary button_color">Ir a donantes</button>
+                            <p class="card-text">¿Ténes alguna inquietud o sugerencia? Te invitamos a que nos dejes tu
+                                mensaje en la caja de comentarios ¡En la brevedad te vamos a estar respondiendo a tu
+                                correo electrónico!</p>
+                            <a th:href="@{#contacto}"><button class="btn btn-primary button_color">Ir a
+                                    formulario</button></a>
                         </div>
                     </div>
                 </div>
