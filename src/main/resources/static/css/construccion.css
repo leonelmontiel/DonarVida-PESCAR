@@ -1,0 +1,5 @@
+@media (max-width:768px) {
+    .construccion img{
+        transform:scale(0.5);
+    }
+}
