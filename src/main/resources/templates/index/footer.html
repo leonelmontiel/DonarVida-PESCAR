@@ -4,30 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../static/css/footer.css" th:href="@{/css/footer.css}"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="container-fluid navbar navbar-dark bg-primary navbar-expand-lg">
-        <div class="container-fluid gap-3 d-flex flex-column">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="logo d-flex align-items-center text-white">
-            <img src="../static/img/blood.svg" th:src="@{/img/blood.svg}" width="50px" alt="">
-            <h3>Donar <span>VIDA</span></h3>
-          </div>
-          <div class="collapse navbar-collapse" id="footerSupportedContent">
-            <ul class="navbar-nav gap-3 d-flex flex-lg-row flex-column">
-              <li><a class="nav-link text-white" href="#">Inicio</a></li>
-              <li><a class="nav-link text-white" href="#">Donaciones</a></li>
-              <li><a class="nav-link text-white" href="#">Solicitantes</a></li>
-              <li><a class="nav-link text-white" href="#nosotros">Nosotros</a></li>
-              <li><a class="nav-link text-white" href="#">Contacto</a></li>
-              <li><a class="nav-link text-white" href="https://github.com/leonelmontiel/DonarVida-PESCAR">GitHub</a></li>
+    <section>
+      <footer class="footer_container">
+        <img id="logo_footer" src="../static/img/LOGO.png" th:src="@{/img/LOGO.png}" alt="">
+        <nav>
+          <div class="links_footer">
+            <ul class="li_style">
+              <li class="li_style">
+                <a href="/" class="footer_link">Inicio</a>
+              </li>
+              <li class="li_style">
+                <a href="/donaciones" class="footer_link">Donaciones</a>
+              </li>
+              <li class="li_style">
+                <a href="#skills" class="footer_link">Solicitantes</a>
+              </li>
+              <li class="li_style">
+                <a href="#contacto" class="footer_link">Contacto</a>
+              </li>
             </ul>
           </div>
-        </div>
-      </nav>
+        </nav>
+        <p id="p_footer">Copyright© Donar Vida 2022</p>
+      </footer>
+    </section>
 </body>
 </html>

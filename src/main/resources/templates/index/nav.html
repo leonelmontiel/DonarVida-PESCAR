@@ -5,30 +5,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="../static/css/nav.css" th:href="@{/css/nav.css}">
+  <link rel="stylesheet" type="text/css" href="../static/css/nav.css" th:href="@{/css/nav.css}"> 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
 </head>
 <body>
-    <nav class="container-fluid navbar navbar-dark navbar-expand-lg bg-primary fixed-top w-100">
-        <div class="container-fluid gap-3">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="logo d-flex align-items-center text-white">
-            <img src="../static/img/blood.svg" th:src="@{/img/blood.svg}" width="50px" alt="">
-            <h3>Donar <span>VIDA</span></h3>
-          </div>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item btn-neon"><a class="nav-link text-white" href="/">Inicio</a></li>
-              <li class="nav-item btn-neon"><a class="nav-link text-white" href="/donaciones">Donaciones</a></li>
-              <li class="nav-item btn-neon"><a class="nav-link text-white" href="#">Solicitantes</a></li>
-              <li class="nav-item btn-neon"><a class="nav-link text-white" href="#nosotros">Nosotros</a></li>
-              <li class="nav-item btn-neon"><a class="nav-link text-white" href="#">Contacto</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+  <header class="position-fixed" >
+    <nav class="navbar-expand-lg navbar navbar-light">
+      <div class="links container-fluid">
+        <img id="logo" src="../static/img/LOGO.png" th:src="@{/img/LOGO.png}" alt="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon icon-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="/" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="/donaciones" class="nav-link">Donaciones</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">Solicitantes</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contacto" class="nav-link">Contacto</a>
+            </li>
+          </ul>
+      </div>
+      </div>
+    </nav>
+  </header>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="../static/js/nav.js" th:src="@{/js/nav.js}"></script>
 </html>

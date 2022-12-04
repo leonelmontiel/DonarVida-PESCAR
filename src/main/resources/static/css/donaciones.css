@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+.donacion{
+    top: 75px !important;
+
+}
+
+#body_donaciones{
+    background-image: url(../img/blob-scene-haikei.svg) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important ;
+}
+
+h3{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.font{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.button_color{
+    background-color: #d60015ae !important;
+    border: none;
+    border-radius: 1rem !important;
+    outline: none !important;
+    border-color:#d60015ae !important ;
+} 

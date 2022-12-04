@@ -32,9 +32,11 @@
     height: 350px !important;
 }
 
-#nosotros {
+/* #nosotros {
     background-color: white;
-}
+} */
+
+
 
 @media (max-width: 600px) {
     .fa-github, .fa-linkedin {
